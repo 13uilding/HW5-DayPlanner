@@ -24,10 +24,9 @@ span {
     margin: .5rem;
 }
 
-.col-1, .col-2, .col-8{
+/* .dynamicColor{
     background-color: cornflowerblue;
-    z-index: 1;
-}
+} */
 
 .col{
     background-color: ghostwhite;
