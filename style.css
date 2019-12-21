@@ -33,4 +33,13 @@ span {
     background-color: ghostwhite;
 }
 
+#pageNow {
+    text-align: center;
+    background-color: rosybrown;
+    margin-bottom: 0;
+}
+
+#pageNowBtn {
+    padding: 0;
+}
 /* @ 500px we need to change the format */

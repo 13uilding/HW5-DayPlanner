@@ -1,19 +1,17 @@
-var now = moment();
-var displayDateTime = now.format("LLLL");
-
-// Targets
+// Targets========================================
+// Time Elements
+var now; var displayDateTime; var currentHour;
+// Banner Elements
 var pageTitle = $("#pageTitle");
 var pageMonth = $("#pageMonth");
 var pageNow = $("#pageNow");
 var pageNowState = "12h"
-pageNow.text(`Current Time--${now.format("LT")}`);
+var pageNowBtn = $("#pageNowBtn");
 
-// Changing values
-pageMonth.text(now.format("ddd, Do MMMM, YYYY"));
 
+// Events=========================================
+// Banner Elements
 pageNow.on("click", function(event){
-    console.log("heyo")
-    console.log(pageNow);
     if ( pageNow.attr("data-state") === "12h" ){
         pageNow.text(`Current Time--${now.format("kk:mm")}`);
         pageNow.attr("data-state", "24h");
@@ -21,17 +19,24 @@ pageNow.on("click", function(event){
         pageNow.text(`Current Time--${now.format("LT")}`);
         pageNow.attr("data-state", "12h");
     }
+})
+pageNowBtn.on("click", function(event){
+    event.preventDefault();
+    initializeTime();
 
 })
-// Create a toggle between military time and regular
-// I want to create a button to refresh the time displayed
 
 
 
-console.log(now.format("LLLL"));
-// Parsing Strings should use the String + Format because other browsers
-console.log(now.format("LLLL")); // Saturday, December 21, 2019 12:10 pm
+// Functions=======================================
+function initializeTime(){
+    now = moment();
+    displayDateTime = now.format("LLLL");
+    currentHour = now.format("kk")
+    pageMonth.text(now.format("ddd, Do MMMM, YYYY"));
+    pageNow.text(`Current Time--${now.format("LT")}`);
+}
 
 
 
-// 
+initializeTime();
