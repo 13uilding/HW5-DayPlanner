@@ -1,0 +1,26 @@
+body{
+    font-family: 'Gentium Basic', serif;
+}
+
+h1, h3, h5{
+    text-align: center;
+}
+
+p, span{
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgba(129, 219, 11, 0.747); 
+}
+
+.form-control-lg, .fa-save, .timeText{
+    margin: 1rem;
+}
+
+.col-1, .col-2, .col-8{
+    background-color: cornflowerblue;
+    z-index: 1;
+}
+
+.col{
+    background-color: ghostwhite;
+}
