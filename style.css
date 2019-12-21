@@ -6,14 +6,22 @@ h1, h3, h5{
     text-align: center;
 }
 
-p, span{
-    font-size: 2rem;
+p, span {
+    font-size: 1.85rem;
     font-weight: bold;
     color: rgba(129, 219, 11, 0.747); 
 }
+span {
+    font-size: 2.45rem;
+}
 
-.form-control-lg, .fa-save, .timeText{
-    margin: 1rem;
+.form-control{
+    font-size: 1.25rem;
+    padding: 1.25rem 0;
+}
+
+.form-control-md, .fa-save, .timeText{
+    margin: .5rem;
 }
 
 .col-1, .col-2, .col-8{
