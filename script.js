@@ -53,7 +53,6 @@ pageNowBtn.on("click", function(event){
     event.preventDefault();
     initializeTime();
 })
-
 // Time Slot Elements
 // saveBtn.on("mouseover", function(){
 //     $('selector').css('cursor', 'pointer');
@@ -91,7 +90,6 @@ function init() {
         };
     };
 };
-
 function initializeTime(){
     now = moment();
     displayDateTime = now.format("LLLL");
@@ -103,19 +101,12 @@ function initializeTime(){
         assignBackgroundColor(currentHour, hour);
     };
 }
-
-// Do I want a storeTodos function?
-// RenderTodos seems uneccessary
 function renderTimeBoxFormsInput(hour){
     var hourBlock = `t${hour}`;
     if (timeBlockForms[hourBlock] !== undefined){
         $(`.${hourBlock} .form-control`).val(timeBlockForms[hourBlock])
     };
 }
-
-
-
-
 function assignBackgroundColor(currentHour, hour){
     var hourBlock = $(`.t${hour}`);
     if ( currentHour > hour ){
@@ -127,6 +118,6 @@ function assignBackgroundColor(currentHour, hour){
     }
 }
 
-
+// Initializing the page===========================
 init();
 initializeTime();
