@@ -7,10 +7,15 @@ var pageMonth = $("#pageMonth");
 var pageNow = $("#pageNow");
 var pageNowState = "12h"
 var pageNowBtn = $("#pageNowBtn");
-
+// Time Slot Elements
+var saveBtn = $("span");
+var timeTxt = $(".timeText"); //Add this functionality if have time
 
 // Events=========================================
 // Banner Elements
+// pageNow.on("mouseover", function(){
+//     $('selector').css("cursor", "pointer");
+// })
 pageNow.on("click", function(event){
     if ( pageNow.attr("data-state") === "12h" ){
         pageNow.text(`Current Time--${now.format("kk:mm")}`);
@@ -25,6 +30,14 @@ pageNowBtn.on("click", function(event){
     initializeTime();
 
 })
+
+// Time Slot Elements
+// saveBtn.on("mouseover", function(){
+//     $('selector').css('cursor', 'pointer');
+// })
+saveBtn.on("click", function(){
+    console.log($(this))
+});
 
 
 

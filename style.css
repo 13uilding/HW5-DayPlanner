@@ -24,12 +24,8 @@ span {
     margin: .5rem;
 }
 
-/* .dynamicColor{
-    background-color: cornflowerblue;
-} */
-
 .col{
-    background-color: ghostwhite;
+    background-color: rgba(211, 245, 168, 0.884);
 }
 
 #pageNow {
@@ -41,4 +37,3 @@ span {
 #pageNowBtn {
     padding: 0;
 }
-/* @ 500px we need to change the format */
