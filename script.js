@@ -61,16 +61,18 @@ pageNowBtn.on("click", function(event){
 saveBtn.on("click", function(){
     var parentCol = $(this).parent().parent()
     var currentTimeBlock = parentCol.attr("class").split(" ")[1];
-    var currentInput = parentCol.prev().children().val(); // Fix this when I come back
-    console.log(currentInput);
+    var currentInput = parentCol.prev().children().val();
     timeBlockForms[currentTimeBlock] = currentInput;
-    console.log(timeBlockForms);
     localStorage.setItem("savedTimeBlockForms", JSON.stringify(timeBlockForms));
 });
-//Maybe I should try a event delegation
 clearBtn.on("click", function(){
-    console.log("hi");
-})
+    var parentCol = $(this).parent().parent()
+    parentCol.prev().children().val("");
+    var currentTimeBlock = parentCol.attr("class").split(" ")[1];
+    var currentInput;
+    timeBlockForms[currentTimeBlock] = currentInput;
+    localStorage.setItem("savedTimeBlockForms", JSON.stringify(timeBlockForms));    
+});
 
 
 
@@ -106,19 +108,12 @@ function initializeTime(){
 // RenderTodos seems uneccessary
 function renderTimeBoxFormsInput(hour){
     var hourBlock = `t${hour}`;
-    console.log("made it in the function" + hourBlock);
     if (timeBlockForms[hourBlock] !== undefined){
-        console.log("made it in the in")
         $(`.${hourBlock} .form-control`).val(timeBlockForms[hourBlock])
     };
 }
-// // function clearTodo
-// var index = element.parentElement.getAttribute("data-index");
-// todos.splice(index, 1);
 
-// // Store updated todos in localStorage, re-render the list
-// storeTodos();
-// renderTodos();
+
 
 
 function assignBackgroundColor(currentHour, hour){
@@ -126,10 +121,8 @@ function assignBackgroundColor(currentHour, hour){
     if ( currentHour > hour ){
         hourBlock.attr("style", "background-color: lightslategray");
     } else if ( parseInt(currentHour) === parseInt(hour) ){
-        console.log("equal to current");
         hourBlock.attr("style", "background-color: rosybrown");
     } else {
-        console.log("greater than current");
         hourBlock.attr("style", "background-color: cornflowerblue");
     }
 }
