@@ -2,7 +2,7 @@
 ----About----
 
     This application was designed to help a person plan out activities for each hour of the day. The current date and time are displayed at the top of the page. The user can refresh the page using the "Current Time" button. If the user prefers military time over standard time, they can click on "Current Time--..." to change the layout. The page visually changes color for each hour that has passed (grey), will come to pass (blue), and the current hour (red). Each row contains the time of the block, an input that allows users to enter in tasks they want to complete, and two buttons. The first button (floppy disk) saves the text in the input to local storage. The second button (x in a box) clears the line as well as the local storage corresponding to that line.
-    Link to deployed website: https://13uilding.github.io/HW5-DayPlanner/
+    Deployed URL: https://13uilding.github.io/HW5-DayPlanner/ gitHub URL: https://github.com/13uilding/HW5-DayPlanner
 ++++About++++
 ----Things To Add----
 
